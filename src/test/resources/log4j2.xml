@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+    <Appenders>
+        <Console name="std_out" target="SYSTEM_OUT">
+            <ThresholdFilter level="warn" onMismatch="ACCEPT" onMatch="DENY" />
+            <PatternLayout pattern="%d{[yyyy-MM-dd HH:mm:ss.SSS]} %p: %m%n" />
+        </Console>
+        <Console name="std_err" target="SYSTEM_ERR">
+            <ThresholdFilter level="warn" onMatch="ACCEPT" onMismatch="DENY" />
+            <PatternLayout pattern="%d{[yyyy-MM-dd HH:mm:ss.SSS]} %p: %m%npos: %l%n" />
+        </Console>
+    </Appenders>
+    <Loggers>
+        <Root level="off">
+            <AppenderRef ref="std_out"/>
+            <AppenderRef ref="std_err"/>
+        </Root>
+    </Loggers>
+</Configuration>
